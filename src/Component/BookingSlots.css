@@ -1,0 +1,93 @@
+.booking-slots {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #f9f9f9;
+    margin-top: 10%;
+    margin-left: 260px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .day-selector {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  select {
+    padding: 5px;
+  }
+  
+  .new-slot-input {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  input[type="time"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .day-column {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .slots {
+    margin-top: 10px;
+  }
+  
+  .slot-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .remove-icon {
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .remove-icon:hover {
+    color: #c82333;
+  }
+  

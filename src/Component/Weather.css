@@ -1,0 +1,67 @@
+.weather-container {
+    position: relative; /* Ensure video is behind other elements */
+    background: linear-gradient(to right, #4a90e2, #7bd2f7);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: auto; /* Set a max width for better responsiveness */
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .weather-container:hover {
+    transform: scale(1.02);
+  }
+  
+  .weather-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Video stays behind text */
+    opacity: 0.5; /* Make the video less dominant */
+  }
+  
+  .weather-title {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+  
+  .center-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-temp {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  .activity-suggestion {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  
+  .weather-details-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 1.2em;
+  }
+  
+  .weather-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .weather-item i {
+    font-size: 1.0em; /* Adjust icon size */
+    color: #FFD700; /* Gold color for icons */
+  }
+  

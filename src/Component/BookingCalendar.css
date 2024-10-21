@@ -1,0 +1,151 @@
+.booking-calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #1e90ff; 
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.react-calendar__viewContainer {
+  width: 100%;
+}
+
+.react-calendar__tile {
+  text-align: center;
+  padding: 10px 0;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333; 
+  font-size: 16px; 
+}
+
+.react-calendar__tile--active {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background-color: #f0f8ff;
+  border-radius: 6px;
+}
+
+.bookings-list {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bookings-list h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.booking-item {
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.booking-item p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.booking-item p:first-child {
+  font-weight: bold;
+  color: #1e90ff;
+}
+
+.no-bookings {
+  font-style: italic;
+  color: #999;
+}
+
+.react-calendar__month-view__days__day {
+  color: #333; 
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #f00; 
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #1e90ff; 
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:hover {
+  color: #e6e6e6; 
+}
+
+.react-calendar__navigation button:disabled {
+  color: #ccc;
+}
+
+.react-calendar__navigation__label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.react-calendar__navigation__arrow {
+  font-size: 20px;
+  color: white;
+}
+
+.today-btn {
+  background-color: #1e90ff; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; 
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.today-btn:hover {
+  background-color: #4682b4; 
+}

@@ -1,0 +1,49 @@
+.weather-banner {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    background: linear-gradient(to right, #4a90e2, #7bd2f7); /* Gradient background */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.weather-banner:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.date-time {
+    flex: 1; /* Allow it to take available space */
+    text-align: left; /* Align text to the left */
+}
+
+.time {
+    font-size: 2.0em; /* Font size for time */
+}
+
+.date {
+    font-size: 1.2em; /* Font size for date */
+}
+
+.weather-info {
+    text-align: center; /* Center the weather info */
+    flex: 2; /* Allow it to take more space */
+}
+
+.weather-title {
+    font-size: 2.5em; /* Title font size */
+    margin: 0; /* Remove margin */
+}
+
+.weather-condition {
+    font-size: 1.5em; /* Condition font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.activity-suggestion {
+    font-size: 1.2em; /* Suggestion font size */
+    font-style: italic; /* Italic text */
+}

@@ -1,0 +1,122 @@
+.profile-container {
+    width: auto;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    margin-left: 260px;
+    margin-right: auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="file"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .sports-section {
+    margin-top: 20px;
+  }
+  
+  .sport-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+  }
+  
+  .add-sport {
+    margin-top: 20px;
+  }
+  
+  .add-sport input {
+    margin-right: 10px;
+  }
+  
+  .map-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .save-btn,
+  .edit-btn,
+  .remove-btn,
+  .add-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .save-btn:hover,
+  .edit-btn:hover,
+  .remove-btn:hover,
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .sports-list {
+    margin-top: 20px;
+  }
+  
+  .sports-list h3 {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      width: 90%;
+    }
+  }
+  
