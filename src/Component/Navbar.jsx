@@ -30,6 +30,9 @@ const NavBar = () => {
           <Link to="/CreateArena">Create Arena</Link>
         </li>
         <li>
+          <Link to="/Arena">Arena</Link>
+        </li>
+        <li>
           <Link to="/Staffmanage">staff</Link>
         </li>
       </ul>

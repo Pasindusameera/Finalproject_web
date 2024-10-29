@@ -10,6 +10,7 @@ import WeatherBanner from "./Component/WeatherBanner";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Staffmanage from "./Component/Staffmanage";
 import CreateArena from "./Component/CreateArena";
+import Arena from "./Component/Arena";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="WeatherBanner" element={<WeatherBanner />} />
           <Route path="Staffmanage" element={<Staffmanage />} />
           <Route path="CreateArena" element={<CreateArena />} />
+          <Route path="Arena" element={<Arena />} />
           {}
           <Route path="/" element={<Signup />} />
         </Routes>

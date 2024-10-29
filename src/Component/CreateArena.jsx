@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./CreateArena.css"; // Import the CSS file
+import "./CreateArena.css";
 
 const CreateArena = () => {
   const [formData, setFormData] = useState({
