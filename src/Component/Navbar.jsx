@@ -1,16 +1,14 @@
-
 import React from "react";
-import { Link, useNavigate } from "react-router-dom"; 
-import "./NavBar.css"; 
+import { Link, useNavigate } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    
-    localStorage.removeItem("user"); 
-    alert("Logged out successfully!"); 
-    navigate("/login"); 
+    localStorage.removeItem("user");
+    alert("Logged out successfully!");
+    navigate("/login");
   };
 
   return (
@@ -29,9 +27,11 @@ const NavBar = () => {
           <Link to="/BookingSlots">BookingSlots</Link>
         </li>
         <li>
+          <Link to="/CreateArena">Create Arena</Link>
+        </li>
+        <li>
           <Link to="/Staffmanage">staff</Link>
         </li>
-        
       </ul>
       <button className="logout-button" onClick={handleLogout}>
         Logout
