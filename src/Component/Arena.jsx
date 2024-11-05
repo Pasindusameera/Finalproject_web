@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Arena.css";
+import NavBar from './Navbar';
 
 const Arena = () => {
   const [bookings, setBookings] = useState([]);
@@ -85,92 +86,99 @@ const Arena = () => {
   };
 
   return (
-    <div className="bookings-container">
-      <h1>Bookings Management</h1>
-      <div className="tabs">
-        <button className="tab active">All Bookings</button>
-        <button className="tab">Pending Bookings</button>
-      </div>
-      <div className="content">
-        <h2>All Bookings</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Booking ID</th>
-              <th>Arena ID</th>
-              <th>Customer ID</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bookings.map((booking) => (
-              <tr key={booking.bookingId}>
-                <td>{booking.bookingId}</td>
-                <td>{booking.arenaId}</td>
-                <td>{booking.customerId}</td>
-                <td>{booking.status}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <h2>Pending Bookings</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Booking ID</th>
-              <th>Arena ID</th>
-              <th>Customer ID</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {pendingBookings.map((booking) => (
-              <tr key={booking.bookingId}>
-                <td>{booking.bookingId}</td>
-                <td>{booking.arenaId}</td>
-                <td>{booking.customerId}</td>
-                <td>{booking.status}</td>
-                <td>
-                  <button
-                    className="btn update"
-                    onClick={() => handleOpenDialog(booking)}
-                  >
-                    Update
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {showDialog && (
-        <div className="dialog">
-          <div className="dialog-content">
-            <h3>Update Booking Status</h3>
-            <label>Booking ID: {selectedBooking.bookingId}</label>
-            <label>
-              Status:
-              <select
-                value={updatedStatus}
-                onChange={(e) => setUpdatedStatus(e.target.value)}
-              >
-                <option value="pending">Pending</option>
-                <option value="canceled">Canceled</option>
-                <option value="confirmed">Confirmed</option>
-              </select>
-            </label>
-            <button className="btn update" onClick={handleUpdateBooking}>
-              Update
-            </button>
-            <button className="btn cancel" onClick={() => setShowDialog(false)}>
-              Cancel
-            </button>
-          </div>
+    <div className="bookingpage">
+      <NavBar />
+      <div className="bookings-container">
+        <h1>Bookings Management</h1>
+        <div className="tabs">
         </div>
-      )}
+        <div className="content">
+          <h2>All Bookings</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Arena ID</th>
+                <th>Customer ID</th>
+                <th>Customer Name</th> {/* New header for Customer Name */}
+                <th>Status</th>
+                <th>Start Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bookings.map((booking) => (
+                <tr key={booking.bookingId}>
+                  <td>{booking.bookingId}</td>
+                  <td>{booking.arenaId}</td>
+                  <td>{booking.customerId}</td>
+                  <td>{booking.customerName}</td> {/* Display Customer Name */}
+                  <td>{booking.status}</td>
+                  <td>{booking.startTime}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <h2>Pending Bookings</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Arena ID</th>
+                <th>Customer ID</th>
+                <th>Customer Name</th> {/* New header for Customer Name */}
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pendingBookings.map((booking) => (
+                <tr key={booking.bookingId}>
+                  <td>{booking.bookingId}</td>
+                  <td>{booking.arenaId}</td>
+                  <td>{booking.customerId}</td>
+                  <td>{booking.customerName}</td> {/* Display Customer Name */}
+                  <td>{booking.status}</td>
+                  <td>
+                    <button
+                      className="btn update"
+                      onClick={() => handleOpenDialog(booking)}
+                    >
+                      Update
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {showDialog && (
+          <div className="dialog">
+            <div className="dialog-content">
+              <h3>Update Booking Status</h3>
+              <label>Booking ID: {selectedBooking.bookingId}</label>
+              <label>
+                Status:
+                <select
+                  value={updatedStatus}
+                  onChange={(e) => setUpdatedStatus(e.target.value)}
+                >
+                  <option value="pending">Pending</option>
+                  <option value="canceled">Canceled</option>
+                  <option value="confirmed">Confirmed</option>
+                </select>
+              </label>
+              <button className="btn update" onClick={handleUpdateBooking}>
+                Update
+              </button>
+              <button className="btn cancel" onClick={() => setShowDialog(false)}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./CreateArena.css";
+import NavBar from './Navbar';
 
 const CreateArena = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +55,8 @@ const CreateArena = () => {
   };
 
   return (
+    <div className="arena-page">
+            <NavBar />
     <div className="form-container">
       <h2>Add Arena</h2>
       {successMessage && (
@@ -140,6 +143,7 @@ const CreateArena = () => {
           Add Arena
         </button>
       </form>
+    </div>
     </div>
   );
 };

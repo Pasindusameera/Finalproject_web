@@ -1,0 +1,258 @@
+/* Full viewport setup */
+body, .arena-page {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Adjust height automatically */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    background-color: #e5f2f5; /* Light background color */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Font for the page */
+}
+
+/* Dashboard overview styling */
+.dashboard-overview {
+    width: 90%; /* Full width with padding */
+    max-width: 800px; /* Limit max width for readability */
+    margin: 20px 0; /* Margin from top and bottom */
+    text-align: center; /* Center align text */
+}
+
+.stats-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space between cards */
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    margin-top: 20px; /* Space above stats */
+}
+
+.stat-card {
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px; /* Padding around content */
+    margin: 10px; /* Margin around cards */
+    flex: 1; /* Allow cards to grow */
+    max-width: 220px; /* Limit max width for cards */
+}
+
+/* Arena details section styling */
+.arena-details {
+    width: 90%; /* Full width with padding */
+    margin: 20px 0; /* Margin from top and bottom */
+    text-align: left; /* Left align text */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Booking and staff management section styling */
+.booking-management, .staff-management {
+    width: 90%; /* Full width with padding */
+    margin: 20px 0; /* Margin from top and bottom */
+    text-align: left; /* Left align text */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.booking-list, .staff-list {
+    margin-top: 10px; /* Space above the list */
+}
+
+/* Add buttons styling */
+.add-booking-button, .add-staff-button {
+    padding: 10px 15px; /* Padding */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Margin above buttons */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.add-booking-button:hover, .add-staff-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Upcoming events section styling */
+.upcoming-events {
+    width: 90%; /* Full width with padding */
+    margin: 20px 0; /* Margin from top and bottom */
+    text-align: left; /* Left align text */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Footer styling */
+.footer {
+    width: 100%; /* Full width */
+    background-color: #007bff; /* Footer background */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 15px; /* Padding */
+    position: relative; /* Positioning */
+    bottom: 0; /* Stick to bottom */
+}
+.social-media-container {
+    background-color: #f9f9f9; /* Light background for the box */
+    border: 1px solid #eaeaea; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center; /* Center the text */
+    margin: 20px; /* Margin around the box */
+  }
+  
+  .social-media-box {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Space between icons */
+  }
+  
+  .social-icon {
+    font-size: 30px; /* Increased icon size for visibility */
+    color: #555; /* Default icon color */
+    transition: transform 0.2s, color 0.2s; /* Smooth transformation */
+    padding: 10px; /* Padding around icons for clickable area */
+    border-radius: 50%; /* Circle effect on hover */
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Color change on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+    background-color: rgba(0, 123, 255, 0.1); /* Light background on hover */
+  }
+  .staff-management-container {
+    display: flex;
+    justify-content: space-between; /* Aligns text and image side by side */
+    align-items: center; /* Centers content vertically */
+    background-color: #f2f2f2; /* Light background for the section */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px; /* Margin around the box */
+    width: 1000px;
+  }
+  
+  .staff-info {
+    flex: 1; /* Takes up available space */
+    max-width: 60%; /* Limits width for responsiveness */
+  }
+  
+  .staff-info h2 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .staff-info p {
+    font-size: 16px; /* Smaller text size for sentences */
+    margin: 5px 0; /* Spacing between paragraphs */
+  }
+  
+  .staff-link {
+    display: inline-block; /* Makes the link a block for styling */
+    margin-top: 15px; /* Space above the link */
+    padding: 10px 15px; /* Padding for clickable area */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+  }
+  
+  .staff-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .staff-image img {
+    max-width: 100%; /* Responsive image */
+    height: 400px; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+  }
+
+  
+  .order-management-container {
+    display: flex;
+    justify-content: space-between; /* Aligns text and image side by side */
+    align-items: center; /* Centers content vertically */
+    background-color: #f2f2f2; /* Light background for the section */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px; /* Margin around the box */
+    width: 1000px;
+  }
+  
+  .order-info {
+    flex: 1; /* Takes up available space */
+    max-width: 60%; /* Limits width for responsiveness */
+  }
+  
+  .order-info h2 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .order-info p {
+    font-size: 16px; /* Smaller text size for sentences */
+    margin: 5px 0; /* Spacing between paragraphs */
+  }
+  
+  .order-link {
+    display: inline-block; /* Makes the link a block for styling */
+    margin-top: 15px; /* Space above the link */
+    padding: 10px 15px; /* Padding for clickable area */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+  }
+  
+  .order-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .order-image img {
+    max-width: 100%; /* Responsive image */
+    height: 400px; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+  }
+  .footer {
+    color: #000000; /* Black text color */
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f2f2f2; /* Optional: Light background color */
+    font-size: 14px; /* Optional: Smaller font size for footer */
+}
+
+.footer-link {
+    color: #000000; /* Black color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover for accessibility */
+}
+
+  
+  
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .stat-card {
+        max-width: 90%; /* Full width on small screens */
+    }
+}

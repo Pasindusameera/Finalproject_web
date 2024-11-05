@@ -1,67 +1,53 @@
 .weather-container {
-    position: relative; /* Ensure video is behind other elements */
-    background: linear-gradient(to right, #4a90e2, #7bd2f7);
-    color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    max-width: auto; /* Set a max width for better responsiveness */
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  
-  .weather-container:hover {
-    transform: scale(1.02);
-  }
-  
-  .weather-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Video stays behind text */
-    opacity: 0.5; /* Make the video less dominant */
-  }
-  
-  .weather-title {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-  }
-  
-  .center-section {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .weather-temp {
-    font-size: 2em;
-    margin-bottom: 15px;
-  }
-  
-  .activity-suggestion {
-    font-size: 1.5em;
-    font-style: italic;
-    margin-top: 20px;
-  }
-  
-  .weather-details-right {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    font-size: 1.2em;
-  }
-  
-  .weather-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .weather-item i {
-    font-size: 1.0em; /* Adjust icon size */
-    color: #FFD700; /* Gold color for icons */
-  }
-  
+  padding: 20px;
+  text-align: center;
+  background-color: #e0f7fa; /* Light blue background for the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  max-width: 1500px; /* Increased max width for the container */
+  margin: auto; /* Center the container */
+  width: 90vw;
+}
+
+.weather-title {
+  font-size: 28px; /* Increased font size for the title */
+  margin-bottom: 20px;
+  color: #00796b; /* Darker shade for the title */
+}
+
+.weather-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between boxes */
+  flex-wrap: wrap; /* Allow cards to wrap in smaller screens */
+}
+
+.weather-card {
+  background-color: #ffffff; /* White background for cards */
+  padding: 20px; /* Increased padding */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Card shadow */
+  width: 250px; /* Increased width for cards */
+  transition: transform 0.3s; /* Add transition effect on hover */
+}
+
+.weather-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.weather-temp {
+  font-size: 24px; /* Increased font size for temperature */
+  font-weight: bold;
+  color: #e64a19; /* Orange color for temperature */
+}
+
+.activity-suggestion {
+  font-style: italic;
+  color: #388e3c; /* Green color for suggestions */
+}
+
+.weather-item {
+  font-size: 18px; /* Increased font size for items */
+  margin: 10px 0; /* Space between items */
+  color: #1976d2; /* Blue color for weather items */
+}

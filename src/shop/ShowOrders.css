@@ -1,0 +1,82 @@
+/* Main container styling */
+.show-orders-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content wrapper */
+.orders-content {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Error message styling */
+.error {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* Orders table styling */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.orders-table th, .orders-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+}
+
+.orders-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.orders-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Styling individual order items */
+.order-item {
+  margin-bottom: 5px;
+}
+
+/* No orders message */
+.no-orders {
+  color: #555;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .orders-content {
+      width: 95%;
+  }
+
+  .orders-table th, .orders-table td {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+}

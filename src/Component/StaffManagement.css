@@ -1,10 +1,14 @@
 /* StaffManagement.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+body, .staff {
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9cc9d1; /* Background color */
     margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -17,38 +21,95 @@ h2 {
     margin-bottom: 10px;
 }
 
-button {
+/* Button Styles */
+.toggle-button {
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 5px 10px; /* Smaller padding for smaller button size */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.toggle-button:hover {
     background-color: #0056b3;
 }
 
+/* Form Container */
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 90%; /* Make the form responsive */
+    max-width: 600px; /* Set a max width */
+}
+
+/* Input Fields */
 input[type="text"],
 input[type="number"],
-input[type="date"] {
+select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus,
-input[type="date"]:focus {
+select:focus {
     border-color: #007BFF;
     outline: none;
 }
 
-table {
+/* Radio Button Styles */
+fieldset {
+    border: none; /* Remove default fieldset border */
+    margin: 10px 0;
+    padding: 0; /* Remove padding */
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 15px; /* Spacing between radio buttons */
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center; /* Center the button group */
+    margin-top: 20px; /* Add space above button group */
+}
+
+.submit-button,
+.cancel-button,
+.edit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px; /* Smaller padding for smaller button size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover,
+.cancel-button:hover,
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+.staff-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -69,15 +130,24 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+/* Responsive design for smaller screens */
 @media (max-width: 600px) {
-    button {
-        width: 100%;
-        margin: 5px 0;
+    .form-container {
+        padding: 15px; /* Reduced padding for small screens */
     }
     
     input[type="text"],
     input[type="number"],
-    input[type="date"] {
-        width: calc(100% - 22px);
+    select {
+        padding: 8px; /* Slightly smaller padding */
+    }
+    
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+    
+    .button-group button {
+        margin: 5px 0; /* Vertical spacing between buttons */
+        width: 100%; /* Full width for buttons */
     }
 }

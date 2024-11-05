@@ -1,49 +1,118 @@
-.weather-banner {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between left and right */
-    align-items: center; /* Center items vertically */
-    background: linear-gradient(to right, #4a90e2, #7bd2f7); /* Gradient background */
+/* Full viewport setup */
+body, .arena-page {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Adjust height automatically */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    background-color: #e5f2f5; /* Light background color */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Font for the page */
+}
+
+/* Staff management container styling */
+.staff-management-container {
+    display: flex;
+    justify-content: space-between; /* Aligns text and image side by side */
+    align-items: center; /* Centers content vertically */
+    background-color: #f2f9fc; /* Light blue background for the section */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px; /* Margin around the box */
+    width: 1100px; /* Increased width */
+}
+
+/* Staff info styling */
+.staff-info {
+    flex: 1; /* Takes up available space */
+    max-width: 60%; /* Limits width for responsiveness */
+}
+
+.staff-info h2 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+    color: #007bff; /* Bright blue color for headings */
+}
+
+.staff-info p {
+    font-size: 16px; /* Smaller text size for sentences */
+    margin: 5px 0; /* Spacing between paragraphs */
+    color: #555; /* Dark grey for paragraph text */
+}
+
+/* Staff link styling */
+.staff-link {
+    display: inline-block; /* Makes the link a block for styling */
+    margin-top: 15px; /* Space above the link */
+    padding: 10px 15px; /* Padding for clickable area */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.staff-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Staff image styling */
+.staff-image img, .arena-image img {
+    max-width: 100%; /* Responsive image */
+    height: 400px; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+/* Order Management Container */
+.order-management-container {
+    display: flex;
+    justify-content: space-between; /* Aligns text and image side by side */
+    align-items: center; /* Centers content vertically */
+    background-color: #f2f9fc; /* Light blue background for the section */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px; /* Margin around the box */
+    width: 1100px; /* Increased width */
+}
+
+/* Social Media Container */
+.social-media-container {
+    background-color: #f9f9f9; /* Light background for the box */
+    border: 1px solid #eaeaea; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center; /* Center the text */
+    margin: 20px; /* Margin around the box */
+}
+
+/* Footer styling */
+.footer {
+    width: 100%; /* Full width */
+    background-color: #007bff; /* Footer background */
     color: white; /* Text color */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-    transition: transform 0.2s; /* Animation for hover effect */
+    text-align: center; /* Center align text */
+    padding: 15px; /* Padding */
+    position: relative; /* Positioning */
+    bottom: 0; /* Stick to bottom */
 }
 
-.weather-banner:hover {
-    transform: scale(1.02); /* Slightly scale up on hover */
+/* Adjusted Button Styles for Colorfulness */
+.add-booking-button, .add-staff-button {
+    padding: 10px 15px; /* Padding */
+    background-color: #28a745; /* Green button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Margin above buttons */
+    transition: background-color 0.3s; /* Transition effect */
 }
 
-.date-time {
-    flex: 1; /* Allow it to take available space */
-    text-align: left; /* Align text to the left */
-}
-
-.time {
-    font-size: 2.0em; /* Font size for time */
-}
-
-.date {
-    font-size: 1.2em; /* Font size for date */
-}
-
-.weather-info {
-    text-align: center; /* Center the weather info */
-    flex: 2; /* Allow it to take more space */
-}
-
-.weather-title {
-    font-size: 2.5em; /* Title font size */
-    margin: 0; /* Remove margin */
-}
-
-.weather-condition {
-    font-size: 1.5em; /* Condition font size */
-    margin: 10px 0; /* Margin for spacing */
-}
-
-.activity-suggestion {
-    font-size: 1.2em; /* Suggestion font size */
-    font-style: italic; /* Italic text */
+.add-booking-button:hover, .add-staff-button:hover {
+    background-color: #218838; /* Darker color on hover */
 }

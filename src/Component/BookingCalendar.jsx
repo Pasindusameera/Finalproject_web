@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import axios from 'axios';
 import './BookingCalendar.css'; 
@@ -56,7 +56,7 @@ const BookingCalendar = () => {
         )}
       </div>
 
-      {/* Go to Today Button */}
+      /}
       <button className="today-btn" onClick={handleGoToToday}>
         Go to Today
       </button>
@@ -65,4 +65,4 @@ const BookingCalendar = () => {
   );
 };
 
-export default BookingCalendar;
+export default BookingCalendar;*/

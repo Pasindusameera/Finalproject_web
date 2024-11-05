@@ -1,0 +1,89 @@
+/* Container Styles */
+.item-manager-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f9fc;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Add New Item Button */
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Item List Styles */
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .item-list {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

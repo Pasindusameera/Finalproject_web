@@ -1,4 +1,3 @@
-// src/components/StaffManagement.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './StaffManagement.css';
@@ -11,11 +10,11 @@ const StaffManagement = () => {
         name: '',
         age: '',
         address: '',
-        state: '',
         position: '',
-        wages: ''
+        wages: '',
+        maritalStatus: '' // Added marital status
     });
-    const [currentId, setCurrentId] = useState(null); // Track the ID of the staff member being edited
+    const [currentId, setCurrentId] = useState(null);
 
     // Fetch staff data from backend
     useEffect(() => {
@@ -50,9 +49,9 @@ const StaffManagement = () => {
 
     // Edit staff member
     const handleEditStaff = (member) => {
-        setNewStaff(member); // Populate form with the selected staff member's data
-        setCurrentId(member._id); // Set the ID of the staff member being edited
-        setIsEditing(true); // Switch to edit mode
+        setNewStaff(member);
+        setCurrentId(member._id);
+        setIsEditing(true);
     };
 
     // Update staff member
@@ -74,85 +73,85 @@ const StaffManagement = () => {
             name: '',
             age: '',
             address: '',
-            state: '',
             position: '',
-            wages: ''
+            wages: '',
+            maritalStatus: '' // Reset marital status
         });
-        setCurrentId(null); // Reset the current ID
-        setIsEditing(false); // Switch back to view mode
+        setCurrentId(null);
+        setIsEditing(false);
     };
 
     return (
-        <div>
-            <NavBar/>
+        <div className='staff'>
+            <NavBar />
             <h1>Staff Management</h1>
-            <button onClick={() => setIsEditing(!isEditing)}>
+            <button className="toggle-button" onClick={() => setIsEditing(!isEditing)}>
                 {isEditing ? 'View Mode' : 'Edit Mode'}
             </button>
 
             {isEditing && (
-                <div>
+                <div className="form-container">
                     <h2>{currentId ? 'Edit Staff Details' : 'Add Staff Details'}</h2>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={newStaff.name}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="number"
-                        name="age"
-                        placeholder="Age"
-                        value={newStaff.age}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                        value={newStaff.address}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="state"
-                        placeholder="State"
-                        value={newStaff.state}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="position"
-                        placeholder="Position"
-                        value={newStaff.position}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="number"
-                        name="wages"
-                        placeholder="Wages"
-                        value={newStaff.wages}
-                        onChange={handleChange}
-                    />
-                    <button onClick={currentId ? handleUpdateStaff : handleAddStaff}>
-                        {currentId ? 'Update Staff' : 'Add Staff'}
-                    </button>
-                    <button onClick={resetForm}>Cancel</button>
+                    <input type="text" name="name" placeholder="Name" value={newStaff.name} onChange={handleChange} />
+                    <input type="number" name="age" placeholder="Age" value={newStaff.age} onChange={handleChange} />
+                    <input type="text" name="address" placeholder="Address" value={newStaff.address} onChange={handleChange} />
+                    
+                    {/* Position Dropdown */}
+                    <select name="position" value={newStaff.position} onChange={handleChange} required>
+                        <option value="">Select Position</option>
+                        <option value="Security">Security</option>
+                        <option value="Call Center Officer">Call Center Officer</option>
+                        <option value="Cleaner">Cleaner</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Organizer">Organizer</option>
+                    </select>
+
+                    {/* Marital Status Radio Buttons */}
+                    <fieldset>
+                        <legend>Marital Status</legend>
+                        <label>
+                            <input
+                                type="radio"
+                                name="maritalStatus"
+                                value="Married"
+                                checked={newStaff.maritalStatus === 'Married'}
+                                onChange={handleChange}
+                            />
+                            Married
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="maritalStatus"
+                                value="Unmarried"
+                                checked={newStaff.maritalStatus === 'Unmarried'}
+                                onChange={handleChange}
+                            />
+                            Unmarried
+                        </label>
+                    </fieldset>
+
+                    <input type="number" name="wages" placeholder="Wages" value={newStaff.wages} onChange={handleChange} />
+                    <div className="button-group">
+                        <button className="submit-button" onClick={currentId ? handleUpdateStaff : handleAddStaff}>
+                            {currentId ? 'Update Staff' : 'Add Staff'}
+                        </button>
+                        <button className="cancel-button" onClick={resetForm}>Cancel</button>
+                    </div>
                 </div>
             )}
 
             <h2>Staff Details</h2>
-            <table>
+            <table className="staff-table">
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Age</th>
                         <th>Address</th>
-                        <th>State</th>
                         <th>Position</th>
                         <th>Wages</th>
-                        {isEditing && <th>Actions</th>} {/* Only show actions column in edit mode */}
+                        <th>Marital Status</th> {/* Added column for marital status */}
+                        {isEditing && <th>Actions</th>}
                     </tr>
                 </thead>
                 <tbody>
@@ -161,12 +160,12 @@ const StaffManagement = () => {
                             <td>{member.name}</td>
                             <td>{member.age}</td>
                             <td>{member.address}</td>
-                            <td>{member.state}</td>
                             <td>{member.position}</td>
                             <td>{member.wages}</td>
+                            <td>{member.maritalStatus}</td> {/* Added marital status */}
                             {isEditing && (
                                 <td>
-                                    <button onClick={() => handleEditStaff(member)}>Edit</button>
+                                    <button className="edit-button" onClick={() => handleEditStaff(member)}>Edit</button>
                                 </td>
                             )}
                         </tr>

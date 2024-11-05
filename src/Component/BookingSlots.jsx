@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; 
@@ -133,4 +133,4 @@ const BookingSlots = () => {
     );
 };
 
-export default BookingSlots;
+export default BookingSlots;*/

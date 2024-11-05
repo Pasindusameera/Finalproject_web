@@ -13,27 +13,23 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
+      <div className="navbar-left">
+        <Link to="/ArenaHome" className="app-name">
+          Play Hub
+        </Link>
+      </div>
       <ul className="nav-links">
         <li>
-          <Link to="/home">Home</Link>
-        </li>
-        <li>
-          <Link to="/Profile">Profile</Link>
-        </li>
-        <li>
-          <Link to="/BookingCalendar">Calendar</Link>
-        </li>
-        <li>
-          <Link to="/BookingSlots">BookingSlots</Link>
+          <Link to="/ArenaHome">Home</Link>
         </li>
         <li>
           <Link to="/CreateArena">Create Arena</Link>
         </li>
         <li>
-          <Link to="/Arena">Arena</Link>
+          <Link to="/Arena">Booking</Link>
         </li>
         <li>
-          <Link to="/Staffmanage">staff</Link>
+          <Link to="/Staffmanage">Staff</Link>
         </li>
       </ul>
       <button className="logout-button" onClick={handleLogout}>
